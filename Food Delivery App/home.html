@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Food Delivery App | Onboarding</title>
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@400;600;700;800&display=swap"
+            rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./global-styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="device">
+                <div class="header flex-r">
+                    <div class="clock ff-sans-2 fs-300 text-light">9:41</div>
+                    <div class="icon-wrapper flex-r">
+                        <span class="signal">
+                            <i class="fa-solid fa-signal fs-300 "></i>
+                        </span>
+                        <span class="wifi">
+                            <i class="fa-solid fa-wifi fs-300 "></i>
+                        </span>
+                        <span class="battery">
+                            <i class="fa-sharp fa-solid fa-battery-three-quarters"></i>
+                        </span>
+                    </div>
+                </div>
+                <div id="main" class="section-container">
+                    <section class="slide scroll">
+                        <div class="user-info flex-r">
+                            <div class="user-profile-wrapper">
+                                <img src="./images/avatar.png" alt="user's profile picture" class="user-profile-image">
+                            </div>
+                            <div class="user-address">
+                                <span>deliver to</span>
+                                <p class="location">243 Providence Way
+                                </p>
+                            </div>
+                            <div class="cart-icon-wrapper">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                        <form class="search-bar" style="background-color: gray;">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search food,restuarant">
+                        </form>
+                        <div class="special-offers">
+                            <h1>Special Offers</h1>
+                            <div class="special-offers-image" style="background-color: limegreen;">
+                                <img src="./images/special-offers.png" alt="">
+                            </div>
+                        </div>
+                        <div class="menu-category"></div>
+                        <div class=" btn ">
+                            <i class=" next-btn fa-sharp fa-solid fa-arrow-right-long fs-600 text-dark"></i>
+                        </div>
+                    </section>
+                    <section class="slide">
+                        <div class=" btn ">
+                            <i class=" next-btn fa-sharp fa-solid fa-arrow-right-long fs-600 text-dark"></i>
+                        </div>
+                    </section>
+                    <section class="slide">
+                        <div class=" btn ">
+                            <i class=" next-btn fa-sharp fa-solid fa-arrow-right-long fs-600 text-dark"></i>
+                        </div>
+                    </section>
+                    <section class="slide">
+                        <div class=" btn ">
+                            <i class=" next-btn fa-sharp fa-solid fa-arrow-right-long fs-600 text-dark"></i>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>

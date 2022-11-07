@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Food Delivery App | Onboarding</title>
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@400;600;700;800&display=swap"
+            rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./global-styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="device">
+                <div class="header flex-r">
+                    <div class="clock ff-sans-2 fs-300 text-light">9:41</div>
+                    <div class="icon-wrapper flex-r">
+                        <span class="signal">
+                            <i class="fa-solid fa-signal fs-300 "></i>
+                        </span>
+                        <span class="wifi">
+                            <i class="fa-solid fa-wifi fs-300 "></i>
+                        </span>
+                        <span class="battery">
+                            <i class="fa-sharp fa-solid fa-battery-three-quarters"></i>
+                        </span>
+                    </div>
+                </div>
+                <div id="introduction" class="section-container">
+                    <section class="slide onboarding-slide">
+                        <div class="onboarding-image-wrapper">
+                            <img src="./images/coffee.png">
+                        </div>
+                        <div class="onboarding-content-wrapper">
+                            <div class="onboarding-content-info">
+                                <h1 class="onboarding-content-title fs-700 text-dark">Welcome to Foodie</h1>
+                                <p class="onboarding-content-desc ff-sans-2 fs-300 text-light">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, aliquid.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="onboarding-button-wrapper grid">
+                            <div class="dot-indicators flex-r">
+                                <div class="dot active"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <button class="skip-btn btn btn-secondary btn-onbording-left"> Skip</button>
+                            <button class="next-btn btn btn-primary btn-onboarding-right"> Next</button>
+                        </div>
+                    </section>
+                    <section class="slide onboarding-slide">
+                        <div class="onboarding-image-wrapper">
+                            <img src="./images/cart.png" alt="">
+                        </div>
+                        <div class="onboarding-content-wrapper">
+                            <div class="onboarding-content-info">
+                                <h1 class="onboarding-content-title fs-700 text-dark">Choose your meal</h1>
+                                <p class="onboarding-content-desc ff-sans-2 fs-300 text-light">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet vero ut cumque eum
+                                    eius nesciunt esse repellendus ipsam explicabo minus!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="onboarding-button-wrapper grid">
+                            <div class="dot-indicators flex-r">
+                                <div class="dot"></div>
+                                <div class="dot active"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <button class="back-btn btn btn-secondary btn-onbording-left"> Back</button>
+                            <button class=" next-btn btn btn-primary btn-onboarding-right"> Next</button>
+                        </div>
+                    </section>
+                    <section class="slide onboarding-slide">
+                        <div class="onboarding-image-wrapper">
+                            <img src="./images/delivery.png" alt="A man deliverying foods">
+                        </div>
+                        <div class="onboarding-content-wrapper">
+                            <div class="onboarding-content-info">
+                                <h1 class="onboarding-content-title fs-700 text-dark">Get delivery on time</h1>
+                                <p class="onboarding-content-desc ff-sans-2 fs-300 text-light">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
+                                    molestiae ipsam fuga quia corrupti laborum?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="onboarding-button-wrapper grid">
+                            <div class="dot-indicators flex-r">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot active"></div>
+                            </div>
+                            <button data-id="signUp" class="sign-btn btn btn-secondary btn-onbording-left">
+                                Sign up</button>
+                            <button data-id="login" class="sign-btn btn-primary btn-onboarding-right">
+                                Login</button>
+                        </div>
+                    </section>
+                    <section class="slide">
+                        <div class="signUp-slide">
+                            <div class=" btn ">
+                                <i class=" back-btn fa-sharp fa-solid fa-arrow-left-long fs-600 text-dark"></i>
+                            </div>
+                            <div class="signUp-wrapper">
+                                <div class="signUp-image-wrapper">
+                                    <img src="./images/sign-up.png" alt="">
+                                </div>
+                                <div class="signUp-content-wrapper flex-c">
+                                    <h1 class="fs-700 text-dark">
+                                        Sign up
+                                    </h1>
+                                    <form action="./home.html" class="form signUp-form">
+                                        <div class="user-email-input">
+                                            <span>
+                                                <i class="fa-solid fa-at  fs-300"></i>
+                                            </span>
+                                            <input type="email" class="input-field fs-300" placeholder="Email" required>
+                                        </div>
+                                        <div class="user-password-input">
+                                            <span>
+                                                <i class="fa-solid fa-lock  fs-300"></i>
+                                            </span>
+                                            <input type="password" class="input-field fs-300" placeholder=" Password"
+                                                required>
+                                        </div>
+                                        <div class="user-mobile-input">
+                                            <span>
+                                                <i class="fa-solid fa-phone fs-300"></i>
+                                                <input type="tel" class="input-field fs-300" placeholder=" Mobile"
+                                                    required>
+                                            </span>
+                                        </div>
+                                        <div class="agreement">
+                                            <p for="user-agreement" class="ff-sans-2 fs-200 text-dark">
+                                                By signing up, you've agreed to our
+                                                <span class="text-blue">Terms &amp; Conditions</span>
+                                                and
+                                                <span class="text-blue">Privacy Policy</span>
+                                            </p>
+                                        </div>
+                                        <div class="signUp-button-wrapper grid">
+                                            <button type="submit" class="btn btn-primary">
+                                                Continue
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <p class="ff-sans-2 fs-200 text-light text-center">Joined us before?
+                                        <span class="text-blue">Log in</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login-slide">
+                            <div class=" btn login-btn ">
+                                <i class=" back-btn fa-sharp fa-solid fa-arrow-left-long fs-600 text-dark"></i>
+                            </div>
+                            <div class="login-wrapper">
+                                <div class="login-image-wrapper">
+                                    <img src="./images/sign-in.png" alt="">
+                                </div>
+                                <div class="login-content-wrapper flex-c">
+                                    <h1 class="fs-700 text-dark">
+                                        Login
+                                    </h1>
+                                    <form action="./home.html" class="form login-form">
+                                        <div class="user-email-input">
+                                            <span>
+                                                <i class="fa-solid fa-at  fs-300"></i>
+                                            </span>
+                                            <input type="email" class="input-field fs-300" placeholder="Email ID"
+                                                required>
+                                        </div>
+                                        <div class="user-password-input">
+                                            <span>
+                                                <i class="fa-solid fa-lock  fs-300"></i>
+                                            </span>
+                                            <input type="password" class="input-field fs-300" placeholder=" Password"
+                                                required>
+                                        </div>
+                                        <div class="login-button-wrapper grid">
+                                            <button class="btn btn-primary">
+                                                Login
+                                            </button>
+                                            <a href="https://www.google.com/" class="btn btn-secondary">
+                                                <span class="google-icon"></span>
+                                                Login with Google
+                                            </a>
+                                        </div>
+                                    </form>
+                                    <p class="ff-sans-2 fs-200 text-light text-center">Don't have account?
+                                        <span class="text-blue">Sign up</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>

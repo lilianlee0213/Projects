@@ -1,0 +1,106 @@
+/* ------------------- */
+/* Specific Styles   */
+/* ------------------- */
+.onboarding {
+	position: relative;
+	margin: 50px auto;
+	max-width: 450px;
+	height: 100%;
+	overflow-x: hidden;
+	transform: translateX(0%);
+}
+
+.flex-container--onboarding {
+	position: absolute;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 30px;
+	width: 100%;
+	min-height: 700px;
+	padding-bottom: 40px;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+}
+
+.content-info {
+	padding-inline: 40px;
+}
+.content-info h1 {
+	margin-bottom: 15px;
+}
+.content-info p,
+.carousel-btn-wrapper {
+	margin-bottom: 60px;
+}
+
+.dot-indicators {
+	justify-content: center;
+	gap: 12px;
+	margin-bottom: 60px;
+}
+.dot-indicators > * {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background-color: var(--light-gray-color);
+}
+
+.dot-indicators .active {
+	width: 25px;
+	border-radius: 3.5px;
+	background-color: var(--main-color);
+}
+
+.carousel-options-wrapper {
+	justify-content: space-between;
+	gap: 30px;
+}
+
+.carousel-options-wrapper button,
+.carousel-options-wrapper a {
+	padding-block: 16px;
+	min-width: 110px;
+	border: 1px solid white;
+	letter-spacing: 0.05em;
+	cursor: pointer;
+}
+.carousel-options-wrapper .skip-btn,
+.carousel-options-wrapper .back-btn {
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	border-left: none;
+	color: var(--dark-gray-color);
+	background-color: var(--light-gray-color);
+}
+.carousel-options-wrapper .next-btn {
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	border-right: none;
+}
+.carousel-options-wrapper .next-btn,
+.carousel-options-wrapper .start-btn {
+	color: var(--white-color);
+	background-color: var(--main-color);
+}
+
+.carousel-options-wrapper .start-btn {
+	border-radius: 30px;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.carousel-options-wrapper .next-btn:hover {
+	border-right: none;
+}
+.carousel-options-wrapper .skip-btn:hover,
+.carousel-options-wrapper .back-btn:hover {
+	color: var(--white-color);
+	background-color: var(--dark-gray-color);
+}
+.carousel-options-wrapper .next-btn:hover,
+.carousel-options-wrapper .start-btn:hover {
+	color: var(--main-color);
+	background-color: var(--white-color);
+	border-color: var(--main-color);
+}
