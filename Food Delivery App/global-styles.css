@@ -140,6 +140,9 @@ i {
 .d-inline {
 	display: inline-block;
 }
+.d-hidden {
+	display: none;
+}
 .grid {
 	display: grid;
 }
@@ -352,7 +355,35 @@ i {
 	margin-right: 8px;
 }
 
-.home {
-	position: relative;
-	overflow: hidden;
+.menu-category {
+	grid-template-columns: repeat(3, 1fr);
+	place-items: center;
+	text-align: center;
+}
+.category img {
+	margin: 0 auto;
+}
+.near-restaurants {
+	gap: 10px;
+}
+
+.category {
+	width: 100%;
+}
+.category p {
+	font-size: 12px;
+}
+
+.view-btn::after {
+	content: '\f0d7';
+	font-family: 'Font Awesome 6 Free';
+	font-size: 16px;
+	font-weight: 900;
+	transition: all 0.2s ease-in-out;
+}
+.view-btn.active::after {
+	content: '\f0d8';
+}
+.restaurant {
+	background-color: gray;
 }

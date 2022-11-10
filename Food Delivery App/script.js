@@ -1,7 +1,5 @@
 const slides = document.querySelectorAll('.slide');
 const dotIndicators = document.querySelectorAll('.dot-indicators');
-// const slideSection = document.querySelectorAll('section');
-// const signUpBtn = document.querySelector('.signUp-btn');
 slides.forEach(function (slide, index) {
 	slide.style.left = `${index * 100}%`;
 });
@@ -11,7 +9,6 @@ let counter = 0;
 document.addEventListener('click', function (e) {
 	if (e.target.classList.contains('next-btn')) {
 		handleNextBtn();
-		console.log(e.target);
 	} else if (e.target.classList.contains('back-btn')) {
 		handleBackBtn();
 		console.log(e.target.classList.contains('back-btn'));
@@ -29,13 +26,6 @@ document.addEventListener('click', function (e) {
 		}
 	}
 });
-// console.log(signBtns);
-// signUpBtn.addEventListener('click', function () {
-// 	counter++;
-// 	handleCarousel();
-// 	document.querySelector('.logIn-slide').style.display = 'none';
-// 	// console.log(document.querySelector('.logIn-slide'));
-// });
 
 function handleCarousel() {
 	slides.forEach(function (slide) {

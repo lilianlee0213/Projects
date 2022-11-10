@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Food Delivery App | Onboarding</title>
+        <title>Food Delivery App | Home</title>
         <!-- Font Awesome CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
             integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
@@ -59,8 +59,52 @@
                                 <img src="./images/special-offers.png" alt="">
                             </div>
                         </div>
-                        <div class="menu-category"></div>
-                        <div class=" btn ">
+                        <div class="menu-category grid">
+                            <div class="category">
+                                <img src="./images/menu-category/fast-food.png" alt="" data-category="Fast Food">
+                                <p>Fast Food</p>
+                            </div>
+                            <div class="category">
+                                <img src="./images/menu-category/sandwich.png" alt="" data-category="Sandwiches">
+                                <p>Sandwiches</p>
+                            </div>
+                            <div class="category">
+                                <img src="./images/menu-category/asian.png" alt="" data-category="Asian">
+                                <p>Asian</p>
+                            </div>
+                            <div class="category">
+                                <img src="./images/menu-category/salad.png" alt="" data-category="Salad">
+                                <p>Salad</p>
+                            </div>
+                            <div class="category">
+                                <img src="./images/menu-category/mexican.png" alt="" data-category="Mexican">
+                                <p>Mexican</p>
+                            </div>
+                            <div class="category">
+                                <img src="./images/menu-category/drink.png" alt="" data-category="Drinks">
+                                <p>Drinks</p>
+                            </div>
+                        </div>
+                        <div class="restaurant-lists">
+                            <div class="main most-popular">
+                                <div class="most-popular-title">
+                                    <h1>Most Popular</h1>
+                                    <button class="view-btn"></button>
+                                </div>
+                                <div class="popular-lists"></div>
+                            </div>
+
+                            <div class="main near-you">
+                                <div class="near-you-title">
+                                    <h1>Near You</h1>
+                                    <button class="view-btn"></button>
+                                </div>
+                                <div class="near-you-lists"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="btn">
                             <i class=" next-btn fa-sharp fa-solid fa-arrow-right-long fs-600 text-dark"></i>
                         </div>
                     </section>
@@ -83,4 +127,5 @@
             </div>
         </div>
         <script src="./script.js"></script>
+        <script src="./home.js" type="module"></script>
     </body>
