@@ -25,6 +25,7 @@ function displayMain() {
 					return restaurant;
 				}
 			});
+
 			handleViewBtns();
 			getRestaurantHtml(popularRestaurants.slice(0, 2), popularLists);
 		} else if (data.isNearYou) {
@@ -83,11 +84,8 @@ window.addEventListener('click', function (e) {
 			return restaurant;
 		}
 	});
-	if (category) {
-		getRestaurantHtml(restaurantCategory, restaurantLists);
-	} else {
-		displayMain();
-	}
+
+	getRestaurantHtml(restaurantCategory, restaurantLists);
 });
 
 function getRestaurantHtml(restaurants, list) {
