@@ -1,0 +1,130 @@
+#home .slide {
+	gap: 15px;
+}
+.user-info {
+	padding-right: 5px;
+	grid-template-columns: auto auto 1fr;
+	align-items: center;
+	gap: 8px;
+}
+.cart-icon-wrapper {
+	justify-self: end;
+}
+.cart-icon-wrapper i {
+	display: grid;
+	place-items: center;
+	width: 40px;
+	aspect-ratio: 1;
+	/* border: 2px solid var(--light-gray-color); */
+	border-radius: 7px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+/* search bar */
+.search-bar {
+	gap: 12px;
+	background-color: var(--light-gray-color);
+	border-radius: 5px;
+	border: 2px solid #e7e7e7;
+	padding: 15px;
+}
+.search-bar i {
+	max-width: 16px;
+	color: #bbbbbc;
+}
+.search-bar input {
+	all: unset;
+	font-size: var(--fs-200);
+	width: 100%;
+}
+
+/* special offers */
+.special-offers {
+	position: relative;
+}
+.special-offers h1 {
+	margin-bottom: 5px;
+}
+
+.special-offers-image {
+	font-family: 'Bungee Inline', cursive;
+	border-radius: 20px;
+	background-image: url('./images/liquid-cheese.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 140px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.special-offers-image img {
+	position: absolute;
+	filter: drop-shadow(0px 15px 35px rgba(250, 218, 164, 0.6997));
+	bottom: 0px;
+	right: 0;
+}
+
+/* menu category */
+.menu-category {
+	grid-template-columns: repeat(3, 1fr);
+	place-items: center;
+	text-align: center;
+}
+.category img {
+	margin: 0 auto;
+}
+.near-restaurants {
+	gap: 10px;
+}
+
+.category {
+	width: 100%;
+}
+.category p {
+	font-size: 12px;
+}
+
+/* restaurant lists */
+
+.most-popular-title,
+.near-you-title {
+	justify-content: space-between;
+	margin-bottom: 8px;
+}
+.view-btn::after {
+	content: '\f0d7';
+	font-family: 'Font Awesome 6 Free';
+	font-size: 16px;
+	font-weight: 900;
+	transition: all 0.2s ease-in-out;
+}
+.view-btn.active::after {
+	content: '\f0d8';
+}
+.restaurant {
+	background-color: var(--white-color);
+	height: 220px;
+}
+.restaurant-image-wrapper {
+	height: 60%;
+}
+.restaurant-image {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+.most-popular {
+	margin-bottom: 25px;
+}
+.restaurant-info-wrapper > {
+	padding: 10px 5px;
+	justify-content: space-between;
+}
+
+.restaurant-stars::after {
+	content: '\f005';
+	font-weight: 900;
+	font-family: 'Font Awesome 6 Free';
+	font-size: var(--fs-100);
+	vertical-align: 1.55px;
+}

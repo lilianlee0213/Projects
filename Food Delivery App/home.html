@@ -14,8 +14,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@400;600;700;800&display=swap"
             rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
         <!-- Custom CSS -->
         <link rel="stylesheet" href="./global-styles.css">
+        <link rel="stylesheet" href="./home.css">
     </head>
     <body>
         <div class="container">
@@ -34,28 +38,31 @@
                         </span>
                     </div>
                 </div>
-                <div id="main" class="section-container">
-                    <section class="slide scroll">
-                        <div class="user-info flex-r">
+                <div id="home" class="section-container">
+                    <section class="slide flex-c scroll">
+                        <div class="user-info grid">
                             <div class="user-profile-wrapper">
                                 <img src="./images/avatar.png" alt="user's profile picture" class="user-profile-image">
                             </div>
-                            <div class="user-address">
-                                <span>deliver to</span>
-                                <p class="location">243 Providence Way
+                            <div class="user-address ff-sans-2">
+                                <span class="text-light fs-200">deliver to</span>
+                                <p class="location fs-300">243 Providence Way
                                 </p>
                             </div>
                             <div class="cart-icon-wrapper">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
                         </div>
-                        <form class="search-bar" style="background-color: gray;">
+                        <form class="search-bar flex-r">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Search food,restuarant">
+                            <input type="text" placeholder="Search food, Restuarant, Drinks">
                         </form>
                         <div class="special-offers">
-                            <h1>Special Offers</h1>
-                            <div class="special-offers-image" style="background-color: limegreen;">
+                            <h1 class="fs-600">Special Offers</h1>
+                            <div class="special-offers-image uppercase text-white">
+                                <h1 class="fs-900">30%</h1>
+                                <p class="fs-300">discount only</p>
+                                <p class="fs-300">valid for today</p>
                                 <img src="./images/special-offers.png" alt="">
                             </div>
                         </div>
@@ -87,28 +94,42 @@
                         </div>
                         <div class="restaurant-lists">
                             <div class="main most-popular">
-                                <div class="most-popular-title">
-                                    <h1>Most Popular</h1>
-                                    <button class="view-btn"></button>
+                                <div class="most-popular-title flex-r">
+                                    <h1 class="fs-600">Most Popular</h1>
+                                    <button class="view-btn" data-view="popular"></button>
                                 </div>
                                 <div class="popular-lists"></div>
                             </div>
 
                             <div class="main near-you">
-                                <div class="near-you-title">
-                                    <h1>Near You</h1>
-                                    <button class="view-btn"></button>
+                                <div class="near-you-title flex-r">
+                                    <h1 class="fs-600">Near You</h1>
+                                    <button class="view-btn" data-view="near"></button>
+                                </div>
+                                <div class="near-you-lists"></div>
+                            </div>
+                        </div>
+                        <div class=" btn ">
+                            <i class=" fa-sharp fa-solid fa-arrow-right-long fs-600 text-dark"></i>
+                        </div>
+                    </section>
+                    <section class="slide">
+                        <div class="restaurant-lists">
+                            <div class="main most-popular">
+                                <div class="most-popular-title flex-r">
+                                    <h1 class="fs-600">Most Popular</h1>
+                                </div>
+                                <div class="popular-lists"></div>
+                            </div>
+
+                            <div class="main near-you">
+                                <div class="near-you-title flex-r">
+                                    <h1 class="fs-600">Near You</h1>
                                 </div>
                                 <div class="near-you-lists"></div>
                             </div>
 
                         </div>
-
-                        <div class="btn">
-                            <i class=" next-btn fa-sharp fa-solid fa-arrow-right-long fs-600 text-dark"></i>
-                        </div>
-                    </section>
-                    <section class="slide">
                         <div class=" btn ">
                             <i class=" next-btn fa-sharp fa-solid fa-arrow-right-long fs-600 text-dark"></i>
                         </div>

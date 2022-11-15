@@ -4,13 +4,14 @@
 :root {
 	/* colors */
 	--main-color: #ff8533;
-	--light-gray-color: #e6e6e6;
+	--light-gray-color: #e9e9e9;
 	--gray-color: #7f7f7f;
 	--dark-gray-color: #4f4f4f;
 	--white-color: #ffffff;
 	--dark-color: #000000;
 
 	/* font sizes */
+	--fs-900: 40px;
 	--fs-800: 26px;
 	--fs-700: 24px;
 	--fs-600: 20px;
@@ -78,8 +79,8 @@ label {
 	margin: 3px 0;
 }
 i {
-	width: 100%;
-	height: 100%;
+	/* width: 100%;
+	height: 100%; */
 	font-weight: 900;
 }
 
@@ -89,6 +90,9 @@ i {
 /* typography */
 .text-accent {
 	color: var(--main-color);
+}
+.text-white {
+	color: var(--white-color);
 }
 .text-light {
 	color: var(--dark-gray-color);
@@ -100,8 +104,12 @@ i {
 	color: #458dc9;
 	font-weight: 900;
 }
+
 .text-center {
 	text-align: center;
+}
+.fs-900 {
+	font-size: var(--fs-900);
 }
 .fs-800 {
 	font-size: var(--fs-800);
@@ -353,37 +361,4 @@ i {
 	background-repeat: no-repeat;
 	vertical-align: middle;
 	margin-right: 8px;
-}
-
-.menu-category {
-	grid-template-columns: repeat(3, 1fr);
-	place-items: center;
-	text-align: center;
-}
-.category img {
-	margin: 0 auto;
-}
-.near-restaurants {
-	gap: 10px;
-}
-
-.category {
-	width: 100%;
-}
-.category p {
-	font-size: 12px;
-}
-
-.view-btn::after {
-	content: '\f0d7';
-	font-family: 'Font Awesome 6 Free';
-	font-size: 16px;
-	font-weight: 900;
-	transition: all 0.2s ease-in-out;
-}
-.view-btn.active::after {
-	content: '\f0d8';
-}
-.restaurant {
-	background-color: gray;
 }
