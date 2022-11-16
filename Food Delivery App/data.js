@@ -12,7 +12,7 @@ export const restaurantsData = [
 		isAd: true,
 		isPopular: true,
 		isNearYou: true,
-		isLiked: false,
+		isLiked: true,
 	},
 	{
 		id: 1,

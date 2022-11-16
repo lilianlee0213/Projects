@@ -85,11 +85,6 @@
 
 /* restaurant lists */
 
-.most-popular-title,
-.near-you-title {
-	justify-content: space-between;
-	margin-bottom: 8px;
-}
 .view-btn::after {
 	content: '\f0d7';
 	font-family: 'Font Awesome 6 Free';
@@ -116,15 +111,32 @@
 .most-popular {
 	margin-bottom: 25px;
 }
-.restaurant-info-wrapper > {
-	padding: 10px 5px;
+.restaurant-info-wrapper {
+	padding: 5px;
 	justify-content: space-between;
+	align-items: flex-start;
+}
+.restaurant-info-right {
+	text-align: right;
 }
 
+.restaurant-stars {
+	font-weight: 700;
+}
 .restaurant-stars::after {
 	content: '\f005';
 	font-weight: 900;
 	font-family: 'Font Awesome 6 Free';
 	font-size: var(--fs-100);
-	vertical-align: 1.55px;
+	vertical-align: 1.57px;
+	color: rgb(214, 200, 47);
+}
+.most-popular-title,
+.near-you-title {
+	justify-content: space-between;
+	margin-bottom: 8px;
+}
+
+.liked {
+	background-color: red;
 }

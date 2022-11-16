@@ -4,7 +4,7 @@ const restaurantLists = document.querySelector('.restaurant-lists');
 const popularLists = document.querySelector('.popular-lists');
 const nearYouLists = document.querySelector('.near-you-lists');
 
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function (e) {
 	displayMain();
 	handleViewBtns();
 });
@@ -57,28 +57,6 @@ function handleViewBtns() {
 	});
 }
 
-const menuCategory = document.querySelector('.menu-category');
-menuCategory.addEventListener('click', function (e) {
-	const category = e.target.dataset.category;
-	const restaurantCategory = restaurantsData.filter(function (restaurant) {
-		if (restaurant.category.includes(category)) {
-			return restaurant;
-		}
-	});
-	if (category) {
-		getRestaurantHtml(restaurantCategory, restaurantLists);
-		const categoryTitle = document.createElement('h1');
-		categoryTitle.textContent = category;
-		const resetBtn = document.createElement('button');
-		resetBtn.classList.add('reset-btn');
-		resetBtn.textContent = 'reset';
-		restaurantLists.prepend(category, resetBtn);
-		resetBtn.addEventListener('click', function () {
-			document.createElement('div').classList.add('popular-list');
-		});
-	}
-});
-
 function getRestaurantHtml(restaurants, list) {
 	let restaurantHtml = restaurants
 		.map(function (restaurant) {
@@ -102,19 +80,20 @@ function getRestaurantHtml(restaurants, list) {
                         <span class="restaurant-category fs-300 text-light">${restaurant.category}</span>
                     </p>
                     <p>
-                        <span class="restaurant-stars fs-300 text-light">${restaurant.stars}</span>
-                        <span class="restaurant-ratings fs-300 text-light">${restaurant.rating}</span>
+                        <span class="restaurant-stars fs-300">${restaurant.stars}</span>
+                        <span class="restaurant-ratings fs-300 text-light">(${restaurant.rating}+)</span>
                     </p>
                 </div>
                 <div class="restaurant-info-right">
                     <span>
-                        <i class="fa-regular fa-heart fs-300 text-light"></i>
+                        <i class="fa-regular fa-heart fs-400 text-light" data-like="${restaurant.id}"></i>
                     </span>
                     <p>
-                        <span class="distance fs-300 text-light">${restaurant.distance}</span>
+                        <span class="distance fs-300 text-light">${restaurant.distance}mi</span>
                         ·
-                        <span class="delivery-time fs-300 text-light">${restaurant.deliveryTime}</span>
+                        <span class="delivery-time fs-300 text-light">${restaurant.deliveryTime}min</span>
                     </p>
+					<p class="fs-300 text-light">$0 delivery fee over $12</p>
                 </div>
             </div>
         </div>
@@ -123,3 +102,25 @@ function getRestaurantHtml(restaurants, list) {
 		.join('');
 	list.innerHTML = restaurantHtml;
 }
+
+const menuCategory = document.querySelector('.menu-category');
+menuCategory.addEventListener('click', function (e) {
+	const category = e.target.dataset.category;
+	const restaurantCategory = restaurantsData.filter(function (restaurant) {
+		if (restaurant.category.includes(category)) {
+			return restaurant;
+		}
+	});
+	if (category) {
+		getRestaurantHtml(restaurantCategory, restaurantLists);
+		const categoryTitle = document.createElement('h1');
+		categoryTitle.textContent = category;
+		const resetBtn = document.createElement('button');
+		resetBtn.classList.add('reset-btn');
+		resetBtn.textContent = 'reset';
+		restaurantLists.prepend(category, resetBtn);
+		resetBtn.addEventListener('click', function () {
+			document.createElement('div').classList.add('popular-list');
+		});
+	}
+});
