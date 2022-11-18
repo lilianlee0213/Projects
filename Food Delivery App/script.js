@@ -10,9 +10,10 @@ document.addEventListener('click', function (e) {
 		handleNextBtn();
 	} else if (e.target.classList.contains('back-btn')) {
 		handleBackBtn();
-		console.log(e.target.classList.contains('back-btn'));
 	} else if (e.target.classList.contains('skip-btn')) {
 		handleSkipBtn();
+	} else if (e.target.classList.contains('home-btn')) {
+		handleHomeBtn();
 	} else if (e.target.classList.contains('sign-btn')) {
 		handleNextBtn();
 		const id = e.target.dataset.id;
@@ -43,5 +44,9 @@ function handleBackBtn() {
 
 function handleSkipBtn() {
 	counter = 2;
+	handleCarousel();
+}
+function handleHomeBtn() {
+	counter = 0;
 	handleCarousel();
 }

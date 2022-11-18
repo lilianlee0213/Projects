@@ -35,7 +35,7 @@ export const restaurantsData = [
 		img: './images/restaurants/Sushi.jpg',
 		category: ['Asian'],
 		price: '$$',
-		stars: 4.0,
+		stars: 4.3,
 		rating: 2700,
 		distance: 6.2,
 		deliveryTime: 53,

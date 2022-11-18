@@ -62,14 +62,19 @@ document.addEventListener('click', function (e) {
 		}
 	});
 });
-// displayRestaurantList();
+
 function displayRestaurantHtml(data, list) {
 	let restaurantHtml = data
 		.map(function (restaurant) {
 			return `
-        <div class="restaurant">
+        <div class="restaurant" data-restaurant="${restaurant.name}">
             <div class="restaurant-image-wrapper">
-                <img class="restaurant-image" src="${restaurant.img}" alt="${restaurant.name}">
+                <img class="restaurant-image btn" src="${restaurant.img}" alt="${restaurant.name}">
+				<div class="overlay">
+					<div class="view-menu btn skip-btn">
+						View Menu
+					</div>
+				</div>
             </div>
             <div class="restaurant-info-wrapper">
                 <div class="restaurant-info-top flex-r">
@@ -80,7 +85,7 @@ function displayRestaurantHtml(data, list) {
                         ${restaurant.name}
                     </h2>
                     <span>
-                        <i class="like-btn fa-regular fa-heart fs-400 text-light" data-id=${restaurant.id}></i>
+                        <i class="btn like-btn fa-regular fa-heart fs-400 text-light" data-id=${restaurant.id}></i>
                     </span>
                    
                 </div>
@@ -108,13 +113,13 @@ function displayRestaurantHtml(data, list) {
 		})
 		.join('');
 	list.innerHTML = restaurantHtml;
+	// const restaurantImages = document.querySelectorAll('.restaurant-image');
+	// restaurantImages.forEach(function (img) {
+	// 	img.addEventListener('mouseover', function (e) {
+	// 		if (e.currentTarget === img) {
+	// 			img.style.opacity = 0.2;
+	// 			img.style.background = 'black'
+	// 		}
+	// 	});
+	// });
 }
-
-// document.querySelector('.popular-lists').innerHTML = getRestaurantHtml();
-// console.log(restaurantHtml);
-// function render() {
-// 	document.querySelector('.popular-lists').innerHTML = getRestaurantHtml();
-// 	// document.querySelector('.near-you-lists').innerHTML = getRestaurantHtml();
-// }
-
-// render();
