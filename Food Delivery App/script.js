@@ -1,5 +1,4 @@
 const slides = document.querySelectorAll('.slide');
-const dotIndicators = document.querySelectorAll('.dot-indicators');
 slides.forEach(function (slide, index) {
 	slide.style.left = `${index * 100}%`;
 });

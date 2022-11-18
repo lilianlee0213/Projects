@@ -4,7 +4,7 @@ const restaurantLists = document.querySelector('.restaurant-lists');
 const popularLists = document.querySelector('.popular-lists');
 const nearYouLists = document.querySelector('.near-you-lists');
 
-window.addEventListener('DOMContentLoaded', function (e) {
+window.addEventListener('DOMContentLoaded', function () {
 	displayMain();
 	handleViewBtns();
 });
@@ -86,7 +86,7 @@ function getRestaurantHtml(restaurants, list) {
                 </div>
                 <div class="restaurant-info-right">
                     <span>
-                        <i class="fa-regular fa-heart fs-400 text-light" data-like="${restaurant.id}"></i>
+                        <i class="fa-regular fa-heart fs-400 text-light"></i>
                     </span>
                     <p>
                         <span class="distance fs-300 text-light">${restaurant.distance}mi</span>

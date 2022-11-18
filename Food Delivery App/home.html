@@ -58,7 +58,7 @@
                             <input type="text" placeholder="Search food, Restuarant, Drinks">
                         </form>
                         <div class="special-offers">
-                            <h1 class="fs-600">Special Offers</h1>
+                            <h1 class="title fs-700">Special Offers</h1>
                             <div class="special-offers-image uppercase text-white">
                                 <h1 class="fs-900">30%</h1>
                                 <p class="fs-300">discount only</p>
@@ -67,77 +67,72 @@
                             </div>
                         </div>
                         <div class="menu-category grid">
-                            <div class="category">
+                            <div class="category category-hover">
                                 <img src="./images/menu-category/fast-food.png" alt="" data-category="Fast Food">
-                                <p>Fast Food</p>
+                                <p class="fs-200">Fast Food</p>
                             </div>
-                            <div class="category">
+                            <div class="category category-hover">
                                 <img src="./images/menu-category/sandwich.png" alt="" data-category="Sandwiches">
-                                <p>Sandwiches</p>
+                                <p class="fs-200">Sandwiches</p>
                             </div>
-                            <div class="category">
+                            <div class="category category-hover">
                                 <img src="./images/menu-category/asian.png" alt="" data-category="Asian">
-                                <p>Asian</p>
+                                <p class="fs-200">Asian</p>
                             </div>
-                            <div class="category">
+                            <div class="category category-hover">
                                 <img src="./images/menu-category/salad.png" alt="" data-category="Salad">
-                                <p>Salad</p>
+                                <p class="fs-200">Salad</p>
                             </div>
-                            <div class="category">
+                            <div class="category category-hover">
                                 <img src="./images/menu-category/mexican.png" alt="" data-category="Mexican">
-                                <p>Mexican</p>
+                                <p class="fs-200">Mexican</p>
                             </div>
-                            <div class="category">
+                            <div class="category category-hover">
                                 <img src="./images/menu-category/drink.png" alt="" data-category="Drinks">
-                                <p>Drinks</p>
+                                <p class="fs-200">Drinks</p>
                             </div>
                         </div>
-                        <div class="restaurant-lists">
-                            <div class="main most-popular">
-                                <div class="most-popular-title flex-r">
-                                    <h1 class="fs-600">Most Popular</h1>
-                                    <button class="view-btn" data-view="popular"></button>
-                                </div>
-                                <div class="popular-lists"></div>
-                            </div>
 
-                            <div class="main near-you">
-                                <div class="near-you-title flex-r">
-                                    <h1 class="fs-600">Near You</h1>
-                                    <button class="view-btn" data-view="near"></button>
+                        <div class="restaurants">
+                            <div id="popular-restaurants" data-filter="popular">
+                                <div class="title flex-r">
+                                    <h1 class="fs-700">Most Popular</h1>
+                                    <button class="btn slide-btn ">
+                                        <i class="next-btn fa-sharp fa-solid fa-arrow-right-long fs-300 text-dark"
+                                            data-view="popular"></i>
+                                    </button>
                                 </div>
-                                <div class="near-you-lists"></div>
+                                <div class="popular-list"></div>
                             </div>
-                        </div>
-                        <div class=" btn ">
-                            <i class=" fa-sharp fa-solid fa-arrow-right-long fs-600 text-dark"></i>
+                            <div id="near-restaurants" data-filter="near">
+                                <div class="title flex-r">
+                                    <h1 class="fs-700">Near You</h1>
+                                    <button class="btn slide-btn ">
+                                        <i class="next-btn fa-sharp fa-solid fa-arrow-right-long fs-300 text-dark"
+                                            data-view="near"></i>
+                                    </button>
+                                </div>
+                                <div class="near-list"></div>
+                            </div>
+                            <div id="category-restaurants">
+                                <div class="title category flex-r">
+                                    <h1 class="fs-700"></h1>
+                                    <button class="btn reset-btn fs-300">Reset</button>
+                                </div>
+                                <div class="category-list"></div>
+                            </div>
                         </div>
                     </section>
-                    <section class="slide">
-                        <div class="restaurant-lists">
-                            <div class="main most-popular">
-                                <div class="most-popular-title flex-r">
-                                    <h1 class="fs-600">Most Popular</h1>
-                                </div>
-                                <div class="popular-lists"></div>
-                            </div>
 
-                            <div class="main near-you">
-                                <div class="near-you-title flex-r">
-                                    <h1 class="fs-600">Near You</h1>
-                                </div>
-                                <div class="near-you-lists"></div>
-                            </div>
+                    <section class="slide scroll">
+                        <button class="btn">
+                            <i class="back-btn fa-sharp fa-solid fa-arrow-left-long fs-400 text-dark"></i>
+                        </button>
+                        <div class="more-restaurants">
+                            <h1 class="fs-800"></h1>
+                            <div class="restaurant-list"></div>
+                        </div>
 
-                        </div>
-                        <div class=" btn ">
-                            <i class=" next-btn fa-sharp fa-solid fa-arrow-right-long fs-600 text-dark"></i>
-                        </div>
-                    </section>
-                    <section class="slide">
-                        <div class=" btn ">
-                            <i class=" next-btn fa-sharp fa-solid fa-arrow-right-long fs-600 text-dark"></i>
-                        </div>
                     </section>
                     <section class="slide">
                         <div class=" btn ">

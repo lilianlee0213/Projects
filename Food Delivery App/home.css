@@ -42,9 +42,6 @@
 .special-offers {
 	position: relative;
 }
-.special-offers h1 {
-	margin-bottom: 5px;
-}
 
 .special-offers-image {
 	font-family: 'Bungee Inline', cursive;
@@ -79,28 +76,52 @@
 .category {
 	width: 100%;
 }
-.category p {
-	font-size: 12px;
+.category-hover:hover,
+.category-hover:focus,
+.category-hover:active {
+	color: var(--main-color);
+	font-size: var(--fs-500);
+	font-weight: 600;
 }
 
 /* restaurant lists */
+#popular-restaurants {
+	margin-bottom: 30px;
+}
+.title {
+	margin-bottom: 10px;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.slide-btn {
+	display: grid;
+	place-items: center;
+	background-color: var(--light-gray-color);
+	border-radius: 50%;
+	aspect-ratio: 1;
+	padding: 0 7px;
+}
+.most-popular {
+	margin-bottom: 25px;
+}
 
-.view-btn::after {
-	content: '\f0d7';
-	font-family: 'Font Awesome 6 Free';
-	font-size: 16px;
-	font-weight: 900;
-	transition: all 0.2s ease-in-out;
-}
-.view-btn.active::after {
-	content: '\f0d8';
-}
 .restaurant {
 	background-color: var(--white-color);
-	height: 220px;
+	height: 200px;
+	margin-bottom: 12px;
 }
+.restaurant:not(:last-child) {
+	border-bottom: 2px solid var(--light-gray-color);
+}
+/* .restaurant:not(:first-child) {
+	padding-top: 12px;
+}
+.restaurant:not(:last-child) {
+	border-bottom: 2px solid var(--light-gray-color);
+} */
 .restaurant-image-wrapper {
 	height: 60%;
+	margin-bottom: 5px;
 }
 .restaurant-image {
 	object-fit: cover;
@@ -108,13 +129,10 @@
 	height: 100%;
 	border-radius: 5px;
 }
-.most-popular {
-	margin-bottom: 25px;
-}
-.restaurant-info-wrapper {
-	padding: 5px;
+
+.restaurant-info-wrapper > div {
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: flex-end;
 }
 .restaurant-info-right {
 	text-align: right;
@@ -138,5 +156,16 @@
 }
 
 .liked {
-	background-color: red;
+	color: red;
+}
+.reset-btn {
+	background-color: var(--light-gray-color);
+	width: 60px;
+	border-radius: 40px;
+	font-weight: 600;
+	padding: 5px 0;
+}
+
+.more-restaurants h1 {
+	margin: 20px 0;
 }
