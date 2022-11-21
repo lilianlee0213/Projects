@@ -31,6 +31,8 @@ document.addEventListener('click', function (e) {
 			return restaurant;
 		}
 	});
+	// Category BUTTON
+	console.log(category);
 	if (category) {
 		displayRestaurantHtml(restaurantCategory, categoryListContainer);
 		this.querySelector('.category h1').textContent = category;
@@ -113,13 +115,4 @@ function displayRestaurantHtml(data, list) {
 		})
 		.join('');
 	list.innerHTML = restaurantHtml;
-	// const restaurantImages = document.querySelectorAll('.restaurant-image');
-	// restaurantImages.forEach(function (img) {
-	// 	img.addEventListener('mouseover', function (e) {
-	// 		if (e.currentTarget === img) {
-	// 			img.style.opacity = 0.2;
-	// 			img.style.background = 'black'
-	// 		}
-	// 	});
-	// });
 }
