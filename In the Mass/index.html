@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
+        <div class="mouse-cursor">
+            <i class="fa-sharp fa-solid fa-certificate"></i>
+        </div>
         <header id="home">
             <nav>
                 <div class="nav-bar">
@@ -26,8 +29,7 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                             <button class="cart-icon">
-                                <img src="./images/ cart.png" alt="">
-                            </button>
+                                <i class="fa-sharp fa-solid fa-bag-shopping"></i> </button>
                             <button class="login-icon">
                                 <i class="fa-regular fa-user"></i>
                             </button>
@@ -36,21 +38,22 @@
 
                     <div class="nav-toggle sidebar-backdrop"></div>
                     <div class="nav-toggle link-container">
-                        <div class="link-header">
-                            <h2>login</h2>
+                        <div class="link-header flex-r">
+                            <a href="#" class="fs-300">Login to your account</a>
+                            <button class="login fs-200">Login</button>
                         </div>
                         <ul class="links">
                             <li>
-                                <a href="#home" class="scroll-link">Home</a>
+                                <a href="#home" class="scroll-link fs-500 uppercase">Home</a>
                             </li>
                             <li>
-                                <a href="#shop" class="scroll-link">Shop</a>
+                                <a href="#shop" class="scroll-link fs-500 uppercase">Shop</a>
                             </li>
                             <li>
-                                <a href="#offers" class="scroll-link">Special Offers</a>
+                                <a href="#offers" class="scroll-link fs-500 uppercase">Special Offers</a>
                             </li>
                             <li>
-                                <a href="#ourStory" class="scroll-link">Our Story</a>
+                                <a href="#ourStory" class="scroll-link fs-500 uppercase">Our Story</a>
                             </li>
                         </ul>
                     </div>
@@ -60,9 +63,27 @@
                 </div>
             </nav>
             <div class="hero">
-                <h1>Inthemass</h1>
+                <div class="intro">
+                    <p class="intro-desc fs-small">#only
+                        <span>good</span>
+                        <span class="uppercase fs-medium">coffee</span>
+                    </p>
+                    <button class="shop-now uppercase">
+                        Shop
+                        <span>now</span>
+                        <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </div>
+                <img class="hero-image">
+                <div class="hero-content">
+                    <h1>Inthemass</h1>
+                    <p>INTHEMASS roasters and baristas focus on the results
+                        and the entire process from the harvested green coffee
+                        beans to become an exceptional cup of coffee.</p>
+                </div>
             </div>
         </header>
+
     </body>
     <script src="./script.js"></script>
 </html>
