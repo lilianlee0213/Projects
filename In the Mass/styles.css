@@ -11,7 +11,7 @@
 	--fs-500: 1.125rem;
 	--fs-400: 1rem;
 	--fs-300: 0.875rem;
-	--fs-200: 0.75rem;
+	--fs-200: 0.8rem;
 	--ff-cursive: 'Silkscreen', cursive;
 	--ff-sans: 'Alexandria', sans-serif;
 	--ff-sans-2: 'Blinker', sans-serif;
@@ -20,6 +20,12 @@
 	--white-color: #ffffff;
 	--orange-color: #ff512b;
 	--black-color: #000;
+	--light-gray-color: rgb(136, 136, 136);
+}
+@media screen and (min-width: 720px) {
+	:root {
+		--fs-500: 0.8rem;
+	}
 }
 .fs-200 {
 	font-size: var(--fs-200);
@@ -66,11 +72,24 @@
 .ff-body {
 	font-family: var(--ff-body);
 }
+.text-light {
+	color: var(--light-gray-color);
+	font-weight: 300;
+}
 .uppercase {
 	text-transform: uppercase;
 }
 .flex-r {
 	display: flex;
+}
+.flex-c {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.grid {
+	display: grid;
 }
 
 * {
@@ -136,6 +155,35 @@ button {
 	transition: transform 150ms ease-in-out;
 } */
 
+/* path {
+	stroke: #ff512b;
+	stroke-dasharray: 304;
+	stroke-dashoffset: 304;
+} */
+
+.highlight {
+	position: absolute;
+	top: 30%;
+	left: 0;
+	right: 0;
+	width: 0%;
+	height: 40px;
+	max-width: 380px;
+	background-repeat: no-repeat;
+	z-index: -3000;
+	animation: width 1300ms forwards;
+	opacity: 0.9;
+}
+@keyframes width {
+	100% {
+		width: 100%;
+	}
+}
+.underline {
+	border-bottom: 20px solid var(--orange-color);
+	width: fit-content;
+}
+
 #home {
 	width: 100%;
 	min-height: 100vh;
@@ -153,9 +201,7 @@ button {
 	font-size: 1.5rem;
 	cursor: pointer;
 }
-.logo {
-	font-size: var(--fs-800);
-}
+/*  */
 .nav-button-container > * {
 	font-size: 1.5rem;
 }
@@ -248,7 +294,11 @@ button {
 .intro-desc span:last-child {
 	display: block;
 	font-weight: 800;
+	position: relative;
+	max-width: 388px;
+	margin: 0 auto;
 }
+
 .shop-now {
 	position: relative;
 	border: 1px solid var(--black-color);
@@ -283,6 +333,56 @@ button {
 	content: url('./images/hero-mobile.jpeg');
 	z-index: -2;
 }
+.hero-content {
+	text-align: center;
+	gap: 20px;
+}
+
+.circle {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+.circle-image {
+	position: absolute;
+	width: 115px;
+	height: 115px;
+	border-radius: 50%;
+	background: url(./images/inthemass.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+.text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	animation: rotateText 10s linear infinite;
+}
+.hero-content p {
+	width: 80%;
+	max-width: 700px;
+}
+@keyframes rotateText {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.text span {
+	position: absolute;
+	left: 50%;
+	font-size: 0.7rem;
+	/* font-family: var(--ff-sans-2); */
+	transform-origin: 0 75px;
+}
 /* .coffee-1 {
 	position: relative;
 	max-width: 800px;
@@ -294,34 +394,14 @@ button {
 	right: -130px;
 } */
 
-@media screen and (min-width: 720px) {
-	.logo {
-		font-size: var(--fs-900);
-	}
-}
 @media screen and (min-width: 1020px) {
 	.nav-bar {
-		position: relative;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
 		border-bottom: none;
 		padding: 20px 30px;
 	}
 	.nav-header {
 		width: 100%;
 		order: 2;
-	}
-	.logo {
-		position: absolute;
-		bottom: -200px;
-		left: 0;
-		right: 0;
-		text-align: center;
-		font-size: clamp(6.25rem, 80%, 121.5rem);
-		font-family: var(--ff-sans);
-		text-transform: uppercase;
-		letter-spacing: 1rem;
-		z-index: -1000;
 	}
 	.nav-button-container {
 		justify-content: flex-end;
@@ -339,9 +419,9 @@ button {
 	}
 	.link-container {
 		width: 100%;
+		height: inherit;
 		position: inherit;
 		transform: translate(0);
-		order: 1;
 		background-color: inherit;
 	}
 
@@ -350,7 +430,7 @@ button {
 		gap: 20px;
 	}
 	.links li {
-		padding: 10px;
+		/* padding: 10px; */
 		opacity: 0.6;
 	}
 	.links li :hover,
@@ -363,7 +443,7 @@ button {
 	.scroll-link {
 		padding: 0;
 		color: var(--black-color);
-		font-size: var(--fs-300);
+		/* font-size: var(--fs-300);  */
 	}
 
 	.nav-open,
@@ -385,4 +465,46 @@ button {
 	.login-icon {
 		display: block;
 	}
+	.logo {
+		font-size: var(--fs-900);
+		position: absolute;
+		top: 40px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		font-size: 10rem;
+		padding: 0 20px;
+		font-family: var(--ff-sans-2);
+		text-transform: uppercase;
+		letter-spacing: 1rem;
+		z-index: -2;
+		font-weight: 900;
+	}
+
+	.hero {
+		min-height: 100vh;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+			'intro image .'
+			'intro image content'
+			'. image content';
+		margin-top: -70px;
+		padding: 0 20px;
+		gap: 0;
+	}
+
+	.intro {
+		grid-area: intro;
+		align-self: flex-end;
+	}
+	.hero-image {
+		grid-area: image;
+		object-fit: cover;
+		content: url(./images/65-scale-coffee.WEBP);
+	}
+	.hero-content {
+		grid-area: content;
+	}
+}
+@media screen and (min-width: 1020px) {
 }

@@ -12,12 +12,12 @@ navToggle.forEach((element) => {
 	});
 });
 const mouseCursor = document.querySelector('.mouse-cursor');
-console.log(mouseCursor);
 window.addEventListener('mousemove', cursor);
 function cursor(e) {
 	mouseCursor.style.top = e.pageY + 'px';
 	mouseCursor.style.left = e.pageX + 'px';
 }
+
 navLinks.forEach((link) => {
 	link.addEventListener('mouseover', () => {
 		mouseCursor.classList.add('link-grow');
@@ -35,3 +35,31 @@ navLinks.forEach((link) => {
 
 // function mousedown(e) {}
 // function mouseup(e) {}
+const text = document.querySelector('.text p');
+text.innerHTML = text.innerHTML
+	.split('')
+	.map(
+		(char, i) => `<span style="transform:rotate(${i * 10.5}deg)">${char}</span>`
+	)
+	.join('');
+
+const logo = document.querySelector('.logo');
+// function handleLogo() {
+// 	logo.addEventListener('mouseover', () => {
+// 		logo.innerHTML = logo.innerHTML
+// 			.split('')
+// 			.map(function (letter) {
+// 				return `<span class="logo-hover">${letter}</span>`;
+// 			})
+// 			.join('');
+// 	});
+// 	logo.addEventListener('mouseleave', () => {
+// 		logo.innerHTML = logo.innerHTML
+// 			.split('')
+// 			.map(function (letter) {
+// 				return `<span>${letter}</span>`;
+// 			})
+// 			.join('');
+// 	});
+// }
+// handleLogo();

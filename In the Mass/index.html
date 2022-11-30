@@ -11,6 +11,9 @@
             crossorigin="anonymous" referrerpolicy="no-referrer">
         <!-- STYLES -->
         <link rel="stylesheet" href="./styles.css">
+        <script type="text/javascript" src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js"
+            async></script>
+
     </head>
     <body>
         <div class="mouse-cursor">
@@ -23,6 +26,26 @@
                         <button class="nav-btn nav-open">
                             <i class="fas fa-bars"></i>
                         </button>
+                        <div class="nav-toggle link-container">
+                            <div class="link-header flex-r">
+                                <a href="#" class="fs-300">Login to your account</a>
+                                <button class="login fs-200">Login</button>
+                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="#home" class="scroll-link fs-500 uppercase">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#shop" class="scroll-link fs-500 uppercase">Shop</a>
+                                </li>
+                                <li>
+                                    <a href="#offers" class="scroll-link fs-500 uppercase">Special Offers</a>
+                                </li>
+                                <li>
+                                    <a href="#ourStory" class="scroll-link fs-500 uppercase">Our Story</a>
+                                </li>
+                            </ul>
+                        </div>
                         <h1 class="logo ff-cursive">Inthemass</h1>
                         <div class="nav-button-container">
                             <button class="search-icon">
@@ -35,28 +58,7 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="nav-toggle sidebar-backdrop"></div>
-                    <div class="nav-toggle link-container">
-                        <div class="link-header flex-r">
-                            <a href="#" class="fs-300">Login to your account</a>
-                            <button class="login fs-200">Login</button>
-                        </div>
-                        <ul class="links">
-                            <li>
-                                <a href="#home" class="scroll-link fs-500 uppercase">Home</a>
-                            </li>
-                            <li>
-                                <a href="#shop" class="scroll-link fs-500 uppercase">Shop</a>
-                            </li>
-                            <li>
-                                <a href="#offers" class="scroll-link fs-500 uppercase">Special Offers</a>
-                            </li>
-                            <li>
-                                <a href="#ourStory" class="scroll-link fs-500 uppercase">Our Story</a>
-                            </li>
-                        </ul>
-                    </div>
                     <button class="nav-toggle nav-btn nav-close">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
@@ -66,7 +68,12 @@
                 <div class="intro">
                     <p class="intro-desc fs-small">#only
                         <span>good</span>
-                        <span class="uppercase fs-medium">coffee</span>
+                        <span class="uppercase fs-medium">
+                            <!-- Please refer: https://github.com/shubhamjain/svg-loader -->
+                            <svg class="highlight" data-src="https://s2.svgbox.net/pen-brushes.svg?ic=brush-9"
+                                fill="currentColor" color="#ff512b"></svg>
+                            coffee
+                        </span>
                     </p>
                     <button class="shop-now uppercase">
                         Shop
@@ -75,9 +82,15 @@
                     </button>
                 </div>
                 <img class="hero-image">
-                <div class="hero-content">
-                    <h1>Inthemass</h1>
-                    <p>INTHEMASS roasters and baristas focus on the results
+                <div class="hero-content flex-c">
+                    <h1 class="ff-sans-1 fs-small underline">Our Brand</h1>
+                    <div class="circle">
+                        <div class="circle-image"></div>
+                        <div class="text">
+                            <p>#Onlygoodcoffee#IntheMass#Roastery</p>
+                        </div>
+                    </div>
+                    <p class="fs-200 text-light">INTHEMASS roasters and baristas focus on the results
                         and the entire process from the harvested green coffee
                         beans to become an exceptional cup of coffee.</p>
                 </div>
