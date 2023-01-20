@@ -73,13 +73,7 @@ navLinks.forEach((link) => {
 		link.classList.remove('hovered-link');
 	});
 });
-// const cursorChild = cursorParent.children[0];
 
-// window.addEventListener('mousedown', mousedown);
-// window.addEventListener('mouseup', mouseup);
-
-// function mousedown(e) {}
-// function mouseup(e) {}
 const text = document.querySelector('.text p');
 text.innerHTML = text.innerHTML
 	.split('')
@@ -120,5 +114,13 @@ setInterval(function () {
 	if (counter > slides.length - 1) {
 		counter = 0;
 	}
+	dotIndicators.forEach(function (dot, index) {
+		if (index === counter) {
+			dot.setAttribute('aria-selected', true);
+		} else {
+			dot.setAttribute('aria-selected', false);
+		}
+	});
+
 	carousel();
 }, 4000);

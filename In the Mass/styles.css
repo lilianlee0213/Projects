@@ -120,6 +120,11 @@ button {
 .uppercase {
 	text-transform: uppercase;
 }
+.line {
+	position: absolute;
+	width: 100%;
+	height: 7px;
+}
 /* flex/grid */
 .flex-r {
 	display: flex;
@@ -504,7 +509,7 @@ button {
 		position: absolute;
 		left: 0;
 		top: 30%;
-		text-align: le;
+		text-align: lefts;
 	}
 	.hero-image {
 		position: absolute;
@@ -524,7 +529,7 @@ button {
 		width: 500px;
 		position: absolute;
 		right: 0px;
-		bottom: 10%;
+		bottom: 15%;
 	}
 	.circle {
 		margin: 0;
@@ -649,6 +654,12 @@ footer {
 	right: 0;
 	margin: 0 auto;
 	margin-bottom: 20px;
+}
+.slides .line {
+	background-color: #f04d22;
+	left: 0;
+	bottom: 15%;
+	z-index: 1;
 }
 .slides img {
 	position: absolute;
